@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(35, 35, 35);
+}
+
+h1{
+    font-size: 3em;
+    margin-top: 100px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.container{
+    max-width: 300px;
+    margin: auto;
+    background-color: rgba(255, 68, 0, 0.596);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}

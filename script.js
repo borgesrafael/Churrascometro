@@ -13,23 +13,42 @@ let inputTempo = document.getElementById("tempo")
 let resultado = document.getElementById("resultado")
 
 function calcular(){
-    // console.log("calculando")
-
+   
     let adultos = inputAdulto.value
     let criancas = inputCrianca.value
     let tempo = inputTempo.value
 
     let qtdeTotCarne = carnePp(tempo) * adultos + (carnePp(tempo)/ 2 * criancas)
-    console.log(qtdeTotCarne)
+
+    let qtdeTotCerveja = cervejaPp(tempo) * adultos
+
+    let qtdeTotBebida = refrigerantePp(tempo) * adultos + (refrigerantePp(tempo)/ 2 * criancas)
+
+    resultado.innerHTML = `<p>${qtdeTotCarne/1000}kg de carne.</p>`
+    resultado.innerHTML += `<p>${Math.ceil(qtdeTotCerveja/355)} latas de cerveja.</p>`
+    resultado.innerHTML += `<p>${qtdeTotBebida/1000}l de bebidas.</p>`
 }
 
 function carnePp(tempo){
-    let carne = 400
     if (tempo >= 6){
         return 650
     } else {
         return 400
     }
 }
-    
 
+function cervejaPp(tempo){
+    if (tempo >= 6){
+        return 2000
+    } else {
+        return 1200
+    }
+}
+
+function refrigerantePp(tempo){
+    if (tempo >= 6){
+        return 1500
+    } else {
+        return 1000
+    }
+}
